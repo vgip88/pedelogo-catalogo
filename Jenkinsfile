@@ -40,7 +40,7 @@ pipeline {
                 
                 // 2. Injeta com segurança o arquivo kubeconfig da DigitalOcean na VM do Jenkins
                 // OBS: Certifique-se de que o ID aqui seja exatamente o mesmo que você criou no Secret File (ex: 'k8s-kubeconfig')
-                withKubeConfig([credentialsId: 'k8s-kubeconfig']) {
+                withKubeConfig([credentialsId: 'kubeconfig']) {
                     
                     // 3. Executa o deploy aplicando os manifestos da pasta k8s direto na nuvem
                     sh 'kubectl apply -f ./k8s/api.yaml'
