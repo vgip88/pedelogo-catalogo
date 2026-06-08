@@ -13,7 +13,7 @@ spec:
     spec:            
       containers:
       - name: api
-        image: vgip88/api-produto:versao-teste
+        image: vgip88/api-produto:{{tag}}
         ports:
         - containerPort: 80
         imagePullPolicy: Always
